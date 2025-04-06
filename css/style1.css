@@ -1,0 +1,353 @@
+
+* {
+    text-decoration: none; /* supprime soulignement des liens par defaut */
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif; /* police par défaut */
+    background: #f0f0f0; /* couleur de fond */
+    margin: 0;
+    padding-top: 140px; /* espace pour le navbar  */
+  }
+  
+  /* titre principal */
+  h1 {
+    text-align: center;
+    color:  #752714;
+    margin-bottom: 30px;
+  }
+  
+  /* conteneur des filtres */
+  .filtres {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* style des inputs et selects */
+  .filtres input,
+  .filtres select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 250px;
+  }
+  
+  /* bouton principal */
+  button {
+    background-color: rgb(14, 7, 61); 
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    margin: 0 auto 30px;
+    display: block;
+  }
+  
+  button:hover {
+    background-color: #752714; /* Changement de couleur au survol */
+  }
+  
+  /* conteneur des cartes */
+  .contenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  /* mise en page des cartes */
+  .carte {
+    background-color: rgb(198, 191, 175);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+  }
+  
+  /* image dans carte */
+  .carte img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  /* titre carte */
+  .carte strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #5a3326;
+  }
+  
+  /* txte dans carte */
+  .carte p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* navbar */
+  .navbar {
+    background: rgb(14, 7, 61);
+    font-family: Calibri, sans-serif;
+    padding: 30px 60px;
+    height: 110px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Par-dessus tout */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+ 
+  .navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* logo */
+  .logo a {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  /* liste de navigation */
+  .navdiv ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* élément de menu */
+  .navdiv li {
+    list-style: none;
+    margin-right: 25px;
+  }
+  
+  .navdiv li a {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* bouton connexion et inscription */
+  .btn-nav {
+    background-color:  #752714;
+    padding: 8px 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  /* texte d’intro */
+  .intro-text {
+    color: #ddd;
+    font-size: 16px;
+    margin-top: 0px;
+    text-align: center;
+  }
+  
+  /*  formulaire */
+  .form-box {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .form-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  /* bouton du formulaire */
+  .form-box button {
+    background: rgb(19, 9, 88);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+    /*  sortilèges */
+  .sorts-liste {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ddd;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  /* titre des sortilèges */
+  .sorts-liste h2 {
+    text-align: center;
+    color: #111;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  /* liste des sortilèges */
+  .sorts-liste ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sorts-liste li {
+    margin: 10px 0;
+    padding: 12px 16px;
+    background: white;
+    border-left: 6px solid rgb(19, 9, 88);
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+  }
+  
+  .sorts-liste li:hover {
+    transform: translateX(4px);
+  }
+  
+  /* Animation sortilèges */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  } 
+
+/*DARK MODE*/  
+  body.dark {
+    background: #1e1e1e;
+    color: #f0f0f0;
+  }
+  
+  /* DARK MODE texte principal */
+  body.dark h1,
+  body.dark p,
+  body.dark strong {
+    color: #fff;
+  }
+  
+ 
+  body.dark .carte {
+    background: #333;
+    box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+  }
+  
+
+  body.dark .navbar {
+    background: #111;
+  }
+
+  body.dark .btn-nav {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  body.dark input,
+  body.dark select {
+    background: #2a2a2a;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  
+  body.dark button {
+    background-color: #444;
+  }
+  
+  body.dark button:hover {
+    background-color: #666;
+  }
+
+    /* DARK MODE footer */
+  body.dark .footer {
+    background-color: #111;
+  }
+  
+  body.dark .footer a {
+    color: #ddd;
+  }
+  
+  body.dark .footer a:hover {
+    color: #ffcc00;
+  }
+
+  /* DARK MODE sortilèges */
+  body.dark .sorts-liste {
+    background-color: #222;
+    color: #f0f0f0;
+  }
+  
+  body.dark .sorts-liste h2 {
+    color: #fff;
+  }
+  
+  body.dark .sorts-liste li {
+    background: #2a2a2a;
+    color: #fff;
+    border-left-color: #888;
+  }
+  
+/* Footer */
+  .footer {
+    background-color: rgb(19, 9, 88);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  /* contenu du footer */
+  .footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .footer p {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
+  /* liens du footer */
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+  }
+  

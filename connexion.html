@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion</title>
+
+  <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+  <h1>Connexion</h1>
+
+  <!-- Formulaire de connexion -->
+  <form class="form-box" id="loginForm">
+    <input type="email" id="loginEmail" placeholder="Email" required><br>
+    <input type="password" id="loginPassword" placeholder="Mot de passe" required><br>
+    <button type="submit">Se connecter</button>
+  </form>
+
+  <!-- Javascript -->
+  <script>
+    // quand le formulaire est soumis
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // empêche le rechargement de la page
+      alert("Connexion réussie (simulation)"); // message d'alerte
+      window.location.href = " exo.php"; // redirection vers la page d'accueil
+    });
+  </script>
+
+</body>
+</html>

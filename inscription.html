@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscription</title>
+  <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+
+  <h1>Inscription</h1>
+
+  <form class="form-box" id="registerForm">
+    <input type="text" id="registerName" placeholder="Pseudo" required><br>
+    <input type="email" id="registerEmail" placeholder="Email" required><br>
+    <input type="password" id="registerPassword" placeholder="Mot de passe" required><br>
+    <input type="password" id="registerConfirm" placeholder="Confirmer mot de passe" required><br>
+    <button type="submit">S'inscrire</button>
+  </form>
+
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // récupère les valeurs des deux champs de mot de passe
+      const pwd = document.getElementById('registerPassword').value;
+      const confirm = document.getElementById('registerConfirm').value;
+
+      // vérifie si les deux mots de passe sont identiques
+      if (pwd !== confirm) {
+        alert("Les mots de passe ne correspondent pas !");
+        return; // stop si les deux mots de passe ne sont pas identiques
+
+      }
+
+      // si tout est bon =  message de réussite
+      alert("Inscription réussie (simulation)");
+      window.location.href = "index.html"; // retourne à l'accueil après
+    });
+  </script>
+
+</body>
+</html>
