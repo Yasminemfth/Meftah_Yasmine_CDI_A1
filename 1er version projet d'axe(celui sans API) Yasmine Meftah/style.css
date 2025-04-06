@@ -1,0 +1,646 @@
+/*partie site1*/
+p {
+    font-size: 24px;
+    text-align: center;
+    }
+    h1 {
+    font-size: 30px; /*définit la taille de la police d'écriture*/
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    }
+* {
+    box-sizing: border-box; /* paramétre par défaut*/
+    margin: 0;
+    padding: 0;
+}
+
+/* Style du contenu principal */
+.contenu {
+    width: 100%;
+    min-height: auto; /* Supprime la hauteur fixe */
+    padding: 20px 8%; /* Réduit l'espacement interne */
+    position: relative;
+    z-index: 1;
+}
+
+nav{
+    width: 100%;/*ajuste la taille/largeur*/
+    display: flex;/*permet d'aligner facilement les element */
+    align-items: center;
+    justify-content: space-between;/*répartit les éléments de manière égale sur la ligne */
+    padding: 10px 0%;/*Ajoute un espacement/marge interne*/
+}
+
+.logo {
+    width: 180px;
+    cursor: pointer;
+}
+
+
+nav ul {
+    list-style: none; /* Supprime les puces de la liste */
+    width: 100%;
+    text-align: right;
+    padding-right: 30px; /* Réduit légèrement pour éviter un décalage */
+    display: flex;
+    justify-content: flex-end; /* Aligne les liens à droite */
+    align-items: center;
+    gap: 20px; /* Ajoute un espacement régulier */
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 15px; /* Réduit l’espace pour une meilleure lisibilité */
+} 
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold; /* Rendre les liens plus visibles */
+    transition: color 0.3s ease-in-out; /* Effet fluide */
+}
+
+nav ul li a:hover {
+    color: #ff4500; /* Change la couleur au survol */
+}
+
+
+/* Mode clair (Light Mode) */
+.light-mode nav ul li a {
+    color: black; /* Change la couleur des liens en mode clair */
+}
+
+.bouton {
+    width: 200px; /* permet de gerer la largeur du bouton */
+    height: 50px; /* permet de gerer la hauteur du bouton */
+    display: flex; /*permet d'aligner le contenu */
+    align-items: center; /* Centre  le contenu */
+    padding: 10px 20px; /* Ajoute un espacement/marge interne : 10px en haut et en bas, 20px à gauche et à droite  */
+    border: 0; /* Supprime la bordure qui est la de base */
+    outline: 0; /* permet d'enlever l'effet de focus */
+    border-radius: 5px; /* Arrondit légèrement les coins  */
+    background-color: #555252; /* change la couleur du bouton*/
+    color: white; /* met le texte en blanc */
+    font-weight: 500; /* permet de gerez l'epaisseur du texte */
+    cursor: pointer; /* change le curseur pour montrer que  c'est cliquable */
+}
+
+
+.image:hover {
+    transform: scale(1.1); /* fait un leger zoom au survol */
+}
+
+
+/* Placement de l'image en dehors du contenu */
+.image-seb {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centre l'image */
+    margin-top: -20px; /* Ajuste l’espace entre le contenu et l’image */
+}
+
+.image-seb img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Placement de l'image en dehors du contenu */
+.image-Laura {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centre l'image */
+    margin-top: -20px; /* Ajuste l’espace entre le contenu et l’image */
+}
+
+.image-Laura img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+nav{
+    width: 100%;/*ajuste la taille/largeur*/
+    display: flex;/*permet d'aligner facilement les element */
+    align-items: center;
+    justify-content: space-between;/*répartit les éléments de manière égale sur la ligne */
+    padding: 10px 0%;/*Ajoute un espacement/marge interne*/
+}
+
+.logo {
+    width: 180px;
+    cursor: pointer;
+}
+
+nav ul{
+    list-style: none;/*j'ai enlever le style de la liste(y'a plus les petits points)*/
+    width: 100%;
+    text-align: right;
+    padding-right: 60px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin:10px 20px ;/*ajoute une marge entre les élements*/
+} 
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/*partie principal du site */
+main {
+    display: flex;
+    justify-content: center;
+    position: absolute; 
+    top: 20;
+    left: 0;
+    width: 100%; 
+    padding: 10px; /*Ajoute un espace (intérieur) autour du contenu */
+    height: 200px ;
+}
+.cartes {
+    text-align: center;
+}
+
+.cartes img {
+    width: 250px;      /* largeur*/
+    height: 250px;     /* hauteur  */
+    margin: 15px;      /* espacement autour des images */
+    border-radius: 10px; /* Coins arrondis pour chaque image */
+    transition: transform 0.3s ease-in-out; /* Ajoute une transition lors du survol de l'image */
+}
+
+
+/* Effet zoom quand la souris passe dessus */
+.cartes img:hover {
+    transform: scale(1.1); /* Zoom de 10% */
+}
+
+h2 {
+    color: white;    
+}
+
+.texte{
+        position: absolute; /* Positionnement libre dans le parent */
+        bottom: 10%; /* Ajustez la hauteur à partir du bas */
+        left: 2%; /* Ajustez la distance depuis la gauche */
+        font-size: 1em;
+        font-style: italic;
+        color: #fff; /* Blanc pour contraster avec le fond sombre */
+        max-width: 500px; /* Largeur pour limiter le texte */
+        line-height: 1.6; /* Espacement entre les lignes */
+    
+} 
+
+/* Par défaut (mode clair) */
+body { 
+    background-color: black;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition pour un effet fluide */
+}
+
+#logo{
+    margin-right: 1110px; /* Espace entre le logo et les boutons */
+    margin-left: 120px;
+
+}
+
+/* Mode sombre */
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+
+.hero {
+    margin: -5px; /* Supprime les marges */
+    padding: 0; /* Supprime les espacements internes */
+    background: url('sebounet.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+
+h1 {
+    text-align: center;
+    color: red;
+  }
+
+main{
+        display: flex;
+        flex-direction: row;/* permet de disposer les elements horizontalement*/
+}
+
+/*réglages au global*/    
+* {
+    box-sizing: border-box; /* paramétre par défaut*/
+    margin: 0;
+    padding: 0;
+}
+/*applique un style aux cartes(bord rond , emplacement...)*/
+.style{
+        width: 370px; /* Ajuste la largeur de l'image */
+        height: 75px; /* Hauteur fixe pour l'image */
+        padding: 10px;
+        margin: 10px;
+        color: white;
+        background: rgba(255, 0, 0, 0.651);
+        border-radius: 10px;
+}
+
+/* Style des cartes en mode sombre */
+body.light-mode .style {
+    background-color: rgba(241, 90, 90, 0.764); /* Fond blanc en mode sombre */
+    color: black; /* Texte noir */
+}
+
+/* permet de centrer les boutons sur l'image */
+.boutons {
+    position: relative;
+    text-align: center;
+}
+
+/* Centrer les boutons sur l'image */
+.boutons2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Aligner les boutons à droite */
+    position: absolute;/*Positionner de manière absolue c'est a dire (cad) s'adapte a la banniere*/
+    top: 20px; 
+    right: 20px; /* Décale les boutons vers la droite */
+        
+}
+
+/* Onglets */
+.tabs {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0px;
+    margin: 15px;
+    
+    border-bottom: 2px solid red;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: rgb(172, 18, 18);
+    border: 1px solid red;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+body.light-mode .tab{
+    background-color: rgba(241, 90, 90, 0.764) ;
+    border:rgba(241, 90, 90, 0.764);
+    color:black;
+  }
+  
+  .tab-active {
+    background-color: rgba(247, 31, 31, 0.764);
+    color: white;
+    border-bottom: none;
+  }
+  
+  /* Contenus des onglets */
+  .tab-content {
+    margin-top: -15px;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    background: rgba(151, 1, 1, 0.3); /* Fond semi-transparent */
+    backdrop-filter: blur(8px); /* Applique un flou sur l'arrière-plan */
+    border-radius: 10px; /* Arrondit les bords */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ajoute une ombre pour la profondeur */
+    
+  }
+  
+  .content {
+    display: none;
+  }
+  
+  .content.active {
+    display: block;
+  }
+
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 50px;
+    width: 50%;
+}
+
+input {
+    background: rgba(74, 1, 1, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 1rem;
+    width: 90%;
+    border-radius: 50px;
+    margin: 10px 0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+::placeholder {
+    color: black;
+    font-size: 1.5rem;
+    opacity: 0.7;
+}
+
+input:focus {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 32px;
+    cursor: pointer;
+    border: none;
+    background-color: #B80201;
+    color: white;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #950001;
+}
+
+/* Messages d'erreur spécifiques aux champs */
+.message-error {
+    color: rgb(212, 42, 0); /* Rouge pour les erreurs */
+    font-size: 0.9rem; /* Taille de police légèrement réduite */
+    margin: 0 auto 15px auto; /* Centrer horizontalement et ajouter un espace en bas */
+    text-align: left; /* Aligner le texte des erreurs à gauche */
+    width: 120%; /* Correspond à la largeur des champs du formulaire */
+    display: none;
+    max-width: 400px; /* Même largeur maximale que le formulaire */
+    padding: 10px; /* Espacement interne pour aérer les erreurs */
+    background: rgba(212, 42, 0, 0.1); /* Ajoute un fond rouge clair pour distinguer les erreurs */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+/* Messages de succès */
+.message-success {
+    color: rgb(81, 150, 2);
+    font-size: 0.9rem; /* Taille de police légèrement réduite */
+    margin: 0 auto 15px auto; /* Centrer horizontalement et ajouter un espace en bas */
+    text-align: left; /* Aligner le texte des erreurs à gauche */
+    width: 90%; /* Correspond à la largeur des champs du formulaire */
+    max-width: 400px; /* Même largeur maximale que le formulaire */
+    display: none;
+    padding: 10px; /* Espacement interne pour aérer les erreurs */
+    background: rgba(0, 128, 0, 0.197); /* Ajoute un fond rouge clair pour distinguer les erreurs */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+/* Afficher les messages d'erreur et de succès */
+.message-error.visible,
+.message-success.visible {
+    display: block;
+}
+
+/* Champ en erreur */
+input.error {
+    border: 2px solid rgba(212, 42, 0, 1);
+    background-color: rgba(212, 42, 0, 0.1);
+}
+
+input.success{
+    border: 2px solid rgb(12, 123, 45);
+    background-color: rgba(0, 212, 99, 0.1);
+}
+
+  
+/*partie site2*/
+.hero1{
+        margin: -5px; /* Supprime les marges */
+        padding: 0; /* Supprime les espacements internes */
+        background: url('laura.jpg') no-repeat center center/cover;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    
+}
+ 
+.section1 {  
+    display: flex;
+    flex-direction: column; /* met les éléments en colonne */
+    align-items: center;
+    justify-content: center;
+}
+/*pour le texte 1*/
+.texte1 {
+    width: 500px; /* Largeur fixe pour le carré */
+    height: 450px; /* Hauteur fixe pour le carré */
+    padding: 20px;
+    margin: 20px;
+    background: rgb(70, 1, 1); /* Couleur de fond */
+    border: 5px solid #480101; /* Bordure */
+    box-shadow: 10px 10px 20px rgba(241, 240, 240, 0.5); /* Ombre*/
+    color : white;/*couleur de l'ombre*/
+  }
+
+/*pour le texte2*/
+.texte2 {
+    width: 300px; /* Ajuste la largeur du cercle */
+    height: 300px; /* Ajuste la hauteur pour un cercle parfait */
+    color: white;
+    background: rgba(255, 0, 0, 0.651); /* Couleur de fond rouge avec transparence */
+    border-radius: 50%; /* Forme un cercle parfait */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0; /* Supprime la marge supérieure */
+}
+/* quelques petite modif au niv de la liste ,j'ai enlever les num car ça décaller le texte etc*/
+.texte2 ol {
+    margin: 0; /* Supprime la marge par défaut */
+    padding-left: 0; /* Supprime l'espacement par défaut */
+    list-style: none; /* Supprime la numérotation par défaut car ça décaller le texte */
+}
+
+.texte2 li {
+    margin: 5px 0; /* Espace entre chaque élément */
+}
+
+h4{
+    color: rgb(63, 2, 2);
+    font-style : italic;
+}
+/*pour le texte3*/
+.texte3 {
+    width: 802px; /* Largeur fixe pour le carré */
+    height: 190px; /* Hauteur fixe pour le carré */
+    padding: 20px;
+    margin: 20px;
+    background: rgb(119, 23, 23); /* Fond semi-transparent*/
+    color: white;
+    border-radius: 10px; /* Coins arrondis */
+    margin-top: 20px; /* Espace entre les deux articles */
+    text-align: justify; /* permet d'aligner le texte */
+}
+
+
+
+/* j'ai placer le texte 2 et 3 dans un meme espace:le container pour les placer cote a cote sans modifier l'emplacement du texte1*/
+.container{
+    display: flex; /* Utilisation de Flexbox pour aligner les articles côte à côte */
+    justify-content: center; /* Centre les articles horizontalement */
+    align-items: flex-start; /* Aligne les articles en haut */
+    gap: 40px; /* Espace entre le cercle rouge et le texte */
+    margin: 40px auto; /* Centre le conteneur sur la page */
+    max-width: 1200px; /* Limite la largeur maximale du conteneur */
+
+}
+.hero-content{
+    margin-top: -3px
+}
+
+/* ---- FOOTER ---- */
+.footer {
+    background-color: #4e4d4d; /* met la couleur du footer */
+    color: #fff; /* Texte en blanc  */
+    text-align: center; /* centre le texte */
+    padding: 30px 0; /* met un espace interne en haut et en bas */
+    margin-top: 40px; /* met une marge en haut pour séparer du contenu précédent */
+    width: 100vw; /* largeur du footer égale à la largeur de l'écran */
+    background-size: cover; 
+}
+
+/* Conteneur principal du footer */
+.footer-container {
+    display: flex;
+    flex-direction: column; /* met tout en colonne */
+    align-items: center; /* centre les éléments horizontalement */
+    justify-content: center; /* centre verticalement si besoin */
+    max-width: 1200px; /* Limite la largeur du footer */
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+/* Logo centré */
+.footer-logo img {
+    width: 100px; /* ajuste la taille/largeur du logo */
+    margin-bottom: 15px; /* met une marge sous le logo */
+}
+
+/* Liens du footer */
+.footer-liens {
+    display: flex; /* aligne les liens  */
+    gap: 30px; /* met un espace entre les liens */
+    justify-content: center; 
+    margin-bottom: 15px;
+}
+
+.footer-liens a {
+    color: #fff; 
+    text-decoration: none; /* supprime le soulignement des liens */
+    font-size: 16px; /* modifie la taille du texte */
+    transition: color 0.3s; /* effet fluide pour changer la couleur */
+}
+
+.footer-liens a:hover {
+    color: #ff4500; /* change la couleur des liens au survol */
+}
+
+/* Réseaux sociaux centrés */
+.footer-socials {
+    display: flex; 
+    gap: 20px;
+    justify-content: center; 
+    margin-bottom: 15px; 
+}
+
+.footer-socials img {
+    width: 40px; /* largeur icônes */
+    height: 40px; /*  hauteur  icônes */
+    transition: transform 0.3s ease-in-out; 
+}
+
+.footer-socials img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'icône au survol */
+}
+
+/* Texte du bas */
+.footer-text {
+    font-size: 14px; 
+    opacity: 0.7; /* opacité legerement réduite*/
+}
+
+/*permet de déposer une condition spécial qui vient  limiter la taille de l’écran sur
+laquelle on veut appliquer des classes CSS*/
+    /* Responsive pour les écrans de 600px de largeur et moins (smartphones) */
+@media screen and (max-width: 600px) {
+
+    body {
+        background-image: url("evil within.png"); ; /* Image de fond  pour les telephones */
+        background-size: cover; /* Ajuste l'image de fond */
+    }
+
+    .cartes img {
+        width: 100%; /* Les images prennent toute la largeur */
+        height: auto;
+        margin: 5px 0; /* Ajuste les marges */
+    }
+
+    .texte1, .texte2, .texte3 {
+        width: 95%; /* Prend presque toute la largeur */
+        height: auto;
+        font-size: 14px; /* Taille de police réduite */
+    }
+
+    h1, h2, h3, h4 {
+        font-size: 18px; /* Ajuste la taille des titres */
+    }
+
+    .container {
+        gap: 20px; /* réduit l'espacement entre les éléments */
+        flex-direction: column; /* Affiche en colonne */
+    }
+
+    .boutons2 {
+        flex-direction: column; /* affiche les boutons en colonne */
+        gap: 10px; /* ajoute de l'espace entre les boutons */
+        margin: 10px auto; /* centre le conteneur */
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .gif-gauche, .gif-droite {
+        width: 80px; /* Taille réduite des GIFs */
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,347 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+.contenu{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(9,0,7,0.65),rgba(54, 1, 12, 0.65)),/*j'ai ajouter un effet de gradient sur l'image header plus foncé pour que la couleur de l'image soit moins rouge*/
+    url(header.png);
+    background-size: cover;/*permet de bien prendre toute la taille de l'ecran*/
+    background-position: center;/*centre l'image*/
+    padding:10px 8%;
+
+}
+nav{
+    width: 100%;/*ajuste la taille/largeur*/
+    display: flex;/*permet d'aligner facilement les element */
+    align-items: center;
+    justify-content: space-between;/*répartit les éléments de manière égale sur la ligne */
+    padding: 10px 0%;/*Ajoute un espacement/marge interne*/
+}
+
+.logo {
+    width: 180px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none; /* Supprime les puces de la liste */
+    width: 100%;
+    text-align: right;
+    padding-right: 30px; /* Réduit légèrement pour éviter un décalage */
+    display: flex;
+    justify-content: flex-end; /* Aligne les liens à droite */
+    align-items: center;
+    gap: 20px; /* Ajoute un espacement régulier */
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 15px; /* Réduit l’espace pour une meilleure lisibilité */
+} 
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold; /* Rendre les liens plus visibles */
+    transition: color 0.3s ease-in-out; /* Effet fluide */
+}
+
+nav ul li a:hover {
+    color: #ff4500; /* Change la couleur au survol */
+}
+
+.bouton {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex; /* Permet un bon centrage */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    padding: 12px 25px; /* Meilleur espacement autour du texte */
+    border: none; /* Supprime la bordure */
+    outline: none; /* Supprime l’effet de focus */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #555252; /* Couleur du bouton */
+    color: white; /* Couleur du texte */
+    font-weight: 500;
+    cursor: pointer; /* Curseur de clic */
+    transition: background-color 0.3s ease-in-out, transform 0.2s; /* Effet fluide */
+}
+
+/* Effet au survol */
+.bouton:hover {
+    background-color: #444; /* Assombrit légèrement */
+    transform: scale(1.05); /* Effet d'agrandissement léger */
+}
+
+/* Effet au clic */
+.bouton:active {
+    transform: scale(0.95); /* Effet de clic qui donne une impression de "pressé" */
+}
+
+
+.content{
+    margin-top: 14%;
+    color: #fff;
+    max-width: 620px;
+}
+
+.content h1{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 85px;
+    margin-bottom: 25px;
+}
+
+.image {
+    margin-top: 1%; /* met une marge en haut */
+    width: 60%; /*  largeur image */
+    border-radius: 10px; /* arrondit les coins */
+    margin-left: 50px; /* met  une marge à gauche */
+    transition: transform 0.3s ease-in-out; /* ajuoute un effet fluide */
+}
+
+.image:hover {
+    transform: scale(1.1); /* fait un leger zoom au survol */
+}
+
+.presentation{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.presentation p{
+    font-size: 25px;
+    color: white;
+}
+
+/* ---- SLIDER CONTENEUR PRINCIPAL ---- */
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacement entre les éléments */
+}
+
+/* ----  SECTION DE TEXTE ---- */
+.text-section {
+    width: 50%;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+    color: white;
+}
+
+.text-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ff4500;
+}
+
+/* ---- 🟧 SWIPER DES CARTES ---- */
+.swiper.cartes {
+    width: 240px;
+    height: 320px;
+}
+
+/* Style des slides */
+.swiper.cartes .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Couleurs dynamiques pour les slides */
+.swiper.cartes .swiper-slide:nth-child(1n) {
+    background-color: rgb(206, 17, 17);
+}
+
+.swiper.cartes .swiper-slide:nth-child(2n) {
+    background-color: rgb(180, 10, 47);
+}
+
+.swiper.cartes .swiper-slide:nth-child(3n) {
+    background-color: rgb(180, 10, 47);
+}
+
+.swiper.cartes .swiper-slide:nth-child(4n) {
+    background-color: rgb(180, 10, 47);
+}
+
+.swiper.cartes .swiper-slide:nth-child(5n) {
+    background-color: rgb(180, 10, 47);
+}
+
+.swiper.cartes .swiper-slide:nth-child(6n) {
+    background-color: rgb(180, 10, 47);
+}
+
+.swiper.cartes .swiper-slide:nth-child(7n) {
+    background-color: rgb(180, 10, 47);
+}
+
+.swiper.cartes .swiper-slide:nth-child(8n) {
+    background-color: rgb(180, 10, 47);
+}
+
+.swiper.cartes .swiper-slide:nth-child(9n) {
+    background-color: rgb(180, 10, 47);
+}
+
+.swiper.cartes .swiper-slide:nth-child(10n) {
+    background-color: rgb(180, 10, 47);
+}
+
+/* ---- SWIPER DES IMAGES ---- */
+.swiper.img {
+    max-width: 120%;
+    width: 200%;
+    height: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Style des slides contenant les images */
+.swiper.img .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustement des images dans le Swiper */
+.swiper.img .swiper-slide img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* ----  NAVIGATION & PAGINATION ---- */
+.swiper-button-next, 
+.swiper-button-prev {
+    color: #ff4500;
+    font-size: 22px;
+    transition: transform 0.3s;
+}
+
+.swiper-button-next:hover, 
+.swiper-button-prev:hover {
+    transform: scale(1.2);
+}
+
+.swiper-pagination-bullet {
+    background: #ff4500;
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #000;
+}
+
+/* ---- FOOTER ---- */
+.footer {
+    background-color: #4e4d4d; /* met la couleur du footer */
+    color: #fff; /* Texte en blanc  */
+    text-align: center; /* centre le texte */
+    padding: 30px 0; /* met un espace interne en haut et en bas */
+    margin-top: 40px; /* met une marge en haut pour séparer du contenu précédent */
+    width: 100vw; /* largeur du footer égale à la largeur de l'écran */
+    background-size: cover; 
+}
+
+/* Conteneur principal du footer */
+.footer-container {
+    display: flex;
+    flex-direction: column; /* met tout en colonne */
+    align-items: center; /* centre les éléments horizontalement */
+    justify-content: center; /* centre verticalement si besoin */
+    max-width: 1200px; /* Limite la largeur du footer */
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+/* Logo centré */
+.footer-logo img {
+    width: 100px; /* ajuste la taille/largeur du logo */
+    margin-bottom: 15px; /* met une marge sous le logo */
+}
+
+/* Liens du footer */
+.footer-liens {
+    display: flex; /* aligne les liens  */
+    gap: 30px; /* met un espace entre les liens */
+    justify-content: center; 
+    margin-bottom: 15px;
+}
+
+.footer-liens a {
+    color: #fff; 
+    text-decoration: none; /* supprime le soulignement des liens */
+    font-size: 16px; /* modifie la taille du texte */
+    transition: color 0.3s; /* effet fluide pour changer la couleur */
+}
+
+.footer-liens a:hover {
+    color: #ff4500; /* change la couleur des liens au survol */
+}
+
+/* Réseaux sociaux centrés */
+.footer-socials {
+    display: flex; 
+    gap: 20px;
+    justify-content: center; 
+    margin-bottom: 15px; 
+}
+
+.footer-socials img {
+    width: 40px; /* largeur icônes */
+    height: 40px; /*  hauteur  icônes */
+    transition: transform 0.3s ease-in-out; 
+}
+
+.footer-socials img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'icône au survol */
+}
+
+/* Texte du bas */
+.footer-text {
+    font-size: 14px; 
+    opacity: 0.7; /* opacité legerement réduite*/
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-socials {
+        gap: 15px;
+    }
+}
