@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>Bienvenue dans le projet "help"</h1>
+<h1>Bienvenue dans le projet Initiation Backend SQL</h1>
 <p>Voici la liste des fichiers disponibles :</p>
 
 <ul>
