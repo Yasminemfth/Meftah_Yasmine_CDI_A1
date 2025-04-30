@@ -1,0 +1,64 @@
+/*corps de la page */ 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    text-align: center;
+    padding: 30px;
+}
+
+/*l'affichage des cartes */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alignement à gauche */
+    gap: 20px;
+    padding-left: 20px;
+}
+
+/* Apparence des cartes  */
+.carte {
+    background: white;
+    padding: 50px;
+    margin: 20px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* gstion des images dans les cartes */ 
+.carte img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* actions */
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* boutons et liens  */
+.btn-link {
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+/* form pour supprimer des éléments */
+.delete-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.delete-form button {
+    background-color: #cc0000; 
+}
